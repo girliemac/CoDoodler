@@ -5,13 +5,10 @@
 	var canvas = document.getElementById('drawCanvas');
 	var ctx = canvas.getContext('2d');
 
-	var w = Math.min(document.documentElement.clientWidth, window.innerWidth || 300);
-	var h = Math.min(document.documentElement.clientHeight, window.innerHeight || 300);
-	
-	canvas.width = w;
-	canvas.height = h;
-  	
-	ctx.strokeStyle = document.querySelector(':checked').value;
+	canvas.width = Math.min(document.documentElement.clientWidth, window.innerWidth || 300);
+	canvas.height = Math.min(document.documentElement.clientHeight, window.innerHeight || 300);
+	 
+	ctx.strokeStyle = document.querySelector(':checked').id;
 	ctx.lineWidth = '3';
 
 	/* Drawing Events */
@@ -19,7 +16,7 @@
 	var isActive = false;
 
 	document.getElementById('colorSwatch').addEventListener('click', function() {
-		ctx.strokeStyle = document.querySelector(':checked').value;
+		ctx.strokeStyle = document.querySelector(':checked').id;
 	}, false);
 	
 	var isTouchSupported = 'ontouchstart' in window;
@@ -61,7 +58,7 @@
 			      if (i < message.plots.length) {
 			         tracePath(); 
 			      }
-			   }, 5) // give 5 millisec delay on each path
+			   }, 5); // give 5 millisec delay on each stroke
 			}
 			tracePath();
 		}
@@ -71,7 +68,7 @@
 		pubnub.publish({
 			channel : pChannel,
 			message : data
-		})
+		});
      }
 
     /* Draw on canvas */

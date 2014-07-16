@@ -1,26 +1,37 @@
 module.exports = function(grunt) {
-  grunt.initConfig({
+
+grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     uglify: {
 	  	options: {
-			banner: '/* Modified: <%= grunt.template.today("yyyy-mm-dd, hh:MM:ss") %> */\n'
+			 banner: '/* Modified: <%= grunt.template.today("yyyy-mm-dd, hh:MM:ss") %> */\n'
 		},
 		build: {
-	        src: 'app/js/*.js',
+	        src: 'app/js/app.js',
 	        dest: 'app/js/script.min.js'
 	    }
     },
     
     jshint: {
     	options: {
-        	jshintrc: '.jshintrc'
-		},
-		all: [
-        	'Gruntfile.js',
-		      'app/js/*.js',
-	        '!app/js/scripts.min.js'
-		]
+        	//jshintrc: '.jshintrc'
+		  },
+  		all: [
+          'Gruntfile.js',
+  		    'app/js/app.js'
+  		]
+    },
+
+    cssmin: {
+        add_banner: {
+            options: {
+              banner: '/* Modified: <%= grunt.template.today("yyyy-mm-dd, hh:MM:ss") %> */\n'
+            },
+            files: {
+              'app/css/style.min.css': ['app/css/style.css']
+            }
+        }
     },
     
     'http-server': {
@@ -39,8 +50,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-http-server'); 
 
-  grunt.registerTask('default', ['uglify', 'jshint']);
+  grunt.registerTask('default', ['uglify', 'cssmin']);
 
 };
