@@ -14,7 +14,7 @@
 	/* Drawing Events */
 	
 	var isActive = false;
-
+	
 	document.getElementById('colorSwatch').addEventListener('click', function() {
 		ctx.strokeStyle = document.querySelector(':checked').id;
 	}, false);
@@ -102,7 +102,7 @@
 	  isActive = false;
 	  
 	  publish({
-	  	color: document.querySelector(':checked').value,
+	  	color: document.querySelector(':checked').id,
 	  	plots: plots
 	  });
 
