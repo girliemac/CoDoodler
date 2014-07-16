@@ -11,7 +11,7 @@ This toy app supports multiple inputs methods by using `mouse`, `touch`, and `po
 
 If nobody else is present, try launching the URL on multiple tabs/browsers/devices and try doodling on all browser windows.
  
-![demo](https://github.com/girliemac/CoDoodler/blob/master/demo.jpg)
+![demo](https://raw.githubusercontent.com/girliemac/CoDoodler/master/demo.jpg)
 
 
 
