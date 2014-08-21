@@ -1,9 +1,9 @@
 {
   "name": "codoodler",
   "version": "0.0.1",
-  "description": "Multi-user drawing app",
+  "description": "Multi-user drawing toy app",
   "author": "Tomomi Imura",
-  "license": "BSD",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",

@@ -8,14 +8,13 @@ grunt.initConfig({
 			 banner: '/* Modified: <%= grunt.template.today("yyyy-mm-dd, hh:MM:ss") %> */\n'
 		},
 		build: {
-	        src: 'app/js/app.js',
+	        src: 'app/js/*.js',
 	        dest: 'app/js/script.min.js'
 	    }
     },
     
     jshint: {
     	options: {
-        	//jshintrc: '.jshintrc'
 		  },
   		all: [
           'Gruntfile.js',
@@ -38,7 +37,7 @@ grunt.initConfig({
         'dev': {
             root: 'app',
             port: 4343,
-            host: '127.0.0.1',
+            host: '10.96.66.252',
             showDir : true,
             autoIndex: true,
             defaultExt: 'html',
