@@ -2,11 +2,6 @@
 	
 	/* Canvas */
 
-	if(!document.createElement('canvas').getContext) {
-		alert('This browser does not support canvas!');
-		return;
-	}
-
 	var canvas = document.getElementById('drawCanvas');
 	var ctx = canvas.getContext('2d');
 	var color = document.querySelector(':checked').id;

@@ -1,13 +1,23 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
+html {
+	height: 100%;
+}
 body {
     font-family: "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-size: 1.2rem;
     margin: 1em;
     color: #fff;
     background: url(../images/grid-pattern.png) left top repeat, 
-    			url(../images/blue-bkgd.png) center top no-repeat, 
-    			#00629B;
+    			-webkit-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    background: url(../images/grid-pattern.png) left top repeat, 
+    			-moz-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    background: url(../images/grid-pattern.png) left top repeat, 
+    			-ms-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    background: url(../images/grid-pattern.png) left top repeat, 
+    			-o-radial-gradient(50% 15%, #2c98dd, #1a5f96) no-repeat;
+    background: url(../images/grid-pattern.png) left top repeat, 
+    			radial-gradient(circle farthest-side at 50% 15%, #2c98dd, #1a5f96) no-repeat;
+    background-color: #1a5f96;
 }
 header {
 	margin-bottom: 1em;
