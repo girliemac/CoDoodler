@@ -83,12 +83,12 @@ label {
 	font-size: 32px;
 	line-height: 46px;
 }
-label[for=gold] {background: gold;}
-label[for=darkorange] {background: darkorange;}
-label[for=navy] {background: navy;}
-label[for=yellowgreen] {background: yellowgreen;}
-label[for=firebrick] {background: firebrick;}
-label[for=powderblue] {background: powderblue;}
+label[for=color01] {background: gold;}
+label[for=color02] {background: darkorange;}
+label[for=color03] {background: navy;}
+label[for=color04] {background: yellowgreen;}
+label[for=color05] {background: firebrick;}
+label[for=color06] {background: powderblue;}
 
 footer {
 	margin-top: 1.5em;

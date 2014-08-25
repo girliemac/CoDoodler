@@ -4,7 +4,7 @@
 
 	var canvas = document.getElementById('drawCanvas');
 	var ctx = canvas.getContext('2d');
-	var color = document.querySelector(':checked').id;
+	var color = document.querySelector(':checked').getAttribute('data-color');
 
 	canvas.width = Math.min(document.documentElement.clientWidth, window.innerWidth || 300);
 	canvas.height = Math.min(document.documentElement.clientHeight, window.innerHeight || 300);
@@ -16,7 +16,7 @@
 	/* Mouse and touch events */
 	
 	document.getElementById('colorSwatch').addEventListener('click', function() {
-		color = document.querySelector(':checked').id;
+		color = document.querySelector(':checked').getAttribute('data-color');
 	}, false);
 	
 	var isTouchSupported = 'ontouchstart' in window;
